@@ -1,0 +1,4 @@
+C:\Users\SHAILESH\documents\visual studio 2012\Projects\ConferenceTrackManagement\ConferenceTrackManagement\bin\Debug\ConferenceTrackManagement.dll
+C:\Users\SHAILESH\documents\visual studio 2012\Projects\ConferenceTrackManagement\ConferenceTrackManagement\bin\Debug\ConferenceTrackManagement.pdb
+C:\Users\SHAILESH\documents\visual studio 2012\Projects\ConferenceTrackManagement\ConferenceTrackManagement\obj\Debug\ConferenceTrackManagement.dll
+C:\Users\SHAILESH\documents\visual studio 2012\Projects\ConferenceTrackManagement\ConferenceTrackManagement\obj\Debug\ConferenceTrackManagement.pdb

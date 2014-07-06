@@ -1,0 +1,9 @@
+C:\Users\SHAILESH\documents\visual studio 2012\Projects\ConferenceTrackManagement\ConferenceTrackManagementTester\bin\Debug\ConferenceTrackManagementTester.dll
+C:\Users\SHAILESH\documents\visual studio 2012\Projects\ConferenceTrackManagement\ConferenceTrackManagementTester\bin\Debug\ConferenceTrackManagementTester.pdb
+C:\Users\SHAILESH\documents\visual studio 2012\Projects\ConferenceTrackManagement\ConferenceTrackManagementTester\bin\Debug\ConferenceTrackManagement.dll
+C:\Users\SHAILESH\documents\visual studio 2012\Projects\ConferenceTrackManagement\ConferenceTrackManagementTester\bin\Debug\nunit.framework.dll
+C:\Users\SHAILESH\documents\visual studio 2012\Projects\ConferenceTrackManagement\ConferenceTrackManagementTester\bin\Debug\ConferenceTrackManagement.pdb
+C:\Users\SHAILESH\documents\visual studio 2012\Projects\ConferenceTrackManagement\ConferenceTrackManagementTester\bin\Debug\nunit.framework.xml
+C:\Users\SHAILESH\documents\visual studio 2012\Projects\ConferenceTrackManagement\ConferenceTrackManagementTester\obj\Debug\ConferenceTrackManagementTester.csprojResolveAssemblyReference.cache
+C:\Users\SHAILESH\documents\visual studio 2012\Projects\ConferenceTrackManagement\ConferenceTrackManagementTester\obj\Debug\ConferenceTrackManagementTester.dll
+C:\Users\SHAILESH\documents\visual studio 2012\Projects\ConferenceTrackManagement\ConferenceTrackManagementTester\obj\Debug\ConferenceTrackManagementTester.pdb
