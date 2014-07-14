@@ -2,3 +2,14 @@ C:\Users\SHAILESH\documents\visual studio 2012\Projects\ConferenceTrackManagemen
 C:\Users\SHAILESH\documents\visual studio 2012\Projects\ConferenceTrackManagement\ConferenceTrackManagement\bin\Debug\ConferenceTrackManagement.pdb
 C:\Users\SHAILESH\documents\visual studio 2012\Projects\ConferenceTrackManagement\ConferenceTrackManagement\obj\Debug\ConferenceTrackManagement.dll
 C:\Users\SHAILESH\documents\visual studio 2012\Projects\ConferenceTrackManagement\ConferenceTrackManagement\obj\Debug\ConferenceTrackManagement.pdb
+C:\Users\Pirates of OOPS\Documents\Visual Studio 2012\Projects\ConferenceTrackManagement\ConferenceTrackManagement\obj\Debug\ConferenceTrackManagement.csprojResolveAssemblyReference.cache
+C:\Users\Pirates of OOPS\Documents\Visual Studio 2012\Projects\ConferenceTrackManagement\ConferenceTrackManagement\obj\Debug\ConferenceTrackManagement.dll
+C:\Users\Pirates of OOPS\Documents\Visual Studio 2012\Projects\ConferenceTrackManagement\ConferenceTrackManagement\bin\Debug\ConferenceTrackManagement.dll
+C:\Users\Pirates of OOPS\Documents\Visual Studio 2012\Projects\ConferenceTrackManagement\ConferenceTrackManagement\bin\Debug\ConferenceTrackManagement.pdb
+C:\Users\Pirates of OOPS\Documents\Visual Studio 2012\Projects\ConferenceTrackManagement\ConferenceTrackManagement\bin\Debug\mscorlib.dll
+C:\Users\Pirates of OOPS\Documents\Visual Studio 2012\Projects\ConferenceTrackManagement\ConferenceTrackManagement\bin\Debug\normidna.nlp
+C:\Users\Pirates of OOPS\Documents\Visual Studio 2012\Projects\ConferenceTrackManagement\ConferenceTrackManagement\bin\Debug\normnfc.nlp
+C:\Users\Pirates of OOPS\Documents\Visual Studio 2012\Projects\ConferenceTrackManagement\ConferenceTrackManagement\bin\Debug\normnfd.nlp
+C:\Users\Pirates of OOPS\Documents\Visual Studio 2012\Projects\ConferenceTrackManagement\ConferenceTrackManagement\bin\Debug\normnfkc.nlp
+C:\Users\Pirates of OOPS\Documents\Visual Studio 2012\Projects\ConferenceTrackManagement\ConferenceTrackManagement\bin\Debug\normnfkd.nlp
+C:\Users\Pirates of OOPS\Documents\Visual Studio 2012\Projects\ConferenceTrackManagement\ConferenceTrackManagement\obj\Debug\ConferenceTrackManagement.pdb

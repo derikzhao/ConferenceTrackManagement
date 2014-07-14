@@ -1,29 +1,30 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 
 namespace ConferenceTrackManagement
 {
     public interface IScheduler
     {
-        void Schedule(IEnumerable<Track> tracks, IEnumerable<Talk> talks);
+        void Schedule(IEnumerable<Day> days, IEnumerable<Talk> talks);
     }
 
 
     public class SimpleScheduler : IScheduler
     {
-        List<Track> _tracks;
+        List<Day> _days;
         private List<Talk> _talks;
 
         public SimpleScheduler()
         {
-            _tracks = new List<Track>();
+            _days = new List<Day>();
             _talks = new List<Talk>();
         }
 
-        public void Schedule(IEnumerable<Track> tracks, IEnumerable<Talk> talks)
+        public void Schedule(IEnumerable<Day> days, IEnumerable<Talk> talks)
         {
-            _tracks = tracks.ToList();
+            _days = days.ToList();
             _talks = talks.ToList();
 
             SortTalks();
@@ -31,48 +32,57 @@ namespace ConferenceTrackManagement
 
             foreach (var talk in _talks)
             {
-                var isScheduledInMorning = ScheduleInMorning(talk);
-
-                if (!isScheduledInMorning)
+                foreach (var day in _days)
                 {
-                    ScheduleInEvening(talk);
-                }
-            }
+                    var isScheduledInMorning = ScheduleInMorning(talk, day);
 
-            ScheduleNetworkingEvent();
+                    if (!isScheduledInMorning)
+                    {
+                        ScheduleInEvening(talk, day);
+                    }
+                    ScheduleNetworkingEvent(day);
+                }
+
+
+            }
         }
 
-        private void ScheduleNetworkingEvent()
+        private void ScheduleNetworkingEvent(Day day)
         {
-            foreach (var track in _tracks)
+            foreach (var track in day.Tracks)
                 track.Networking.StartTime = track.EveningSession.EndTime.Subtract(track.EveningSession.TimeRemaining);
         }
 
         private void InitializeTracks()
         {
-            foreach (var track in _tracks)
+            foreach (var day in _days)
             {
-                track.MorningSession.Talks=new List<Talk>();
-                track.MorningSession.TimeRemaining = track.MorningSession.EndTime.Subtract(track.MorningSession.StartTime);
-                
-                track.EveningSession.Talks=new List<Talk>();
-                track.EveningSession.TimeRemaining = track.EveningSession.EndTime.Subtract(track.EveningSession.StartTime);
+                foreach (var track in day.Tracks)
+                {
+                    track.MorningSession.Talks = new List<Talk>();
+                    track.MorningSession.TimeRemaining =
+                        track.MorningSession.EndTime.Subtract(track.MorningSession.StartTime);
+
+                    track.EveningSession.Talks = new List<Talk>();
+                    track.EveningSession.TimeRemaining =
+                        track.EveningSession.EndTime.Subtract(track.EveningSession.StartTime);
+                }
             }
         }
 
-        private bool ScheduleInMorning(Talk talk)
+        private bool ScheduleInMorning(Talk talk, Day day)
         {
-            foreach (var track in _tracks)
+            foreach (var track in day.Tracks)
+            {
+                var duration = talk.Duration.Value * (int)(talk.Duration.Unit);
+                if (TalkCanBeScheduledInMorning(duration, track))
                 {
-                    var duration = talk.Duration.Value * (int)(talk.Duration.Unit);
-                    if (TalkCanBeScheduledInMorning(duration, track))
-                    {
-                        track.MorningSession.Talks.Add(talk);
-                        track.MorningSession.TimeRemaining=track.MorningSession
-                                                                .TimeRemaining.Subtract(new TimeSpan(0, duration, 0));
-                        return true;
-                    }
+                    track.MorningSession.Talks.Add(talk);
+                    track.MorningSession.TimeRemaining = track.MorningSession
+                                                            .TimeRemaining.Subtract(new TimeSpan(0, duration, 0));
+                    return true;
                 }
+            }
             return false;
         }
 
@@ -81,9 +91,9 @@ namespace ConferenceTrackManagement
             return (duration <= track.MorningSession.TimeRemaining.TotalMinutes);
         }
 
-        private bool ScheduleInEvening(Talk talk)
+        private bool ScheduleInEvening(Talk talk, Day day)
         {
-            foreach (var track in _tracks)
+            foreach (var track in day.Tracks)
             {
                 var duration = talk.Duration.Value * (int)(talk.Duration.Unit);
                 if (TalkCanBeScheduledInEvening(duration, track))
@@ -104,7 +114,7 @@ namespace ConferenceTrackManagement
 
         private void SortTalks()
         {
-            _talks =_talks.OrderByDescending(t => (t.Duration.Value * (int)(t.Duration.Unit))).ToList();
+            _talks = _talks.OrderByDescending(t => (t.Duration.Value * (int)(t.Duration.Unit))).ToList();
         }
 
 

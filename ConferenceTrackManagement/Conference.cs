@@ -19,7 +19,7 @@ namespace ConferenceTrackManagement
 
         public IResultFormatter ResultFormatter { get; set; } 
 
-        public List<Track> Tracks { get; private set; }
+        public List<Day> Days { get; private set; }
         
         public int TotalTalks {
             get
@@ -30,24 +30,24 @@ namespace ConferenceTrackManagement
 
         private int _remainingTime;
 
-        public Conference(IScheduler scheduler,IEnumerable<Track> tracks)
+        public Conference(IScheduler scheduler,IEnumerable<Day> days)
         {
-            Tracks = new List<Track>();
+            Days = new List<Day>();
             SelectedTalks = new List<Talk>();
 
-            Tracks = tracks.ToList();
+            Days = days.ToList();
             Scheduler = scheduler;
             CalculateRemainingTime();
         }
         
         public void Schedule()
         {
-            Scheduler.Schedule(Tracks,SelectedTalks);
+            Scheduler.Schedule(Days,SelectedTalks);
         }
         
         public void GetSchedule()
         {
-            ResultFormatter.Format(Tracks);
+            ResultFormatter.Format(Days);
         }
 
         public void RegisterTalks()
@@ -86,10 +86,15 @@ namespace ConferenceTrackManagement
 
         private void CalculateRemainingTime()
         {
-            foreach (var track in Tracks)
+            foreach (var day in Days)
             {
-                _remainingTime += (int)track.MorningSession.EndTime.Subtract(track.MorningSession.StartTime).TotalMinutes;
-                _remainingTime += (int)track.EveningSession.EndTime.Subtract(track.EveningSession.StartTime).TotalMinutes;
+                foreach (var track in day.Tracks)
+                {
+                    _remainingTime +=
+                        (int) track.MorningSession.EndTime.Subtract(track.MorningSession.StartTime).TotalMinutes;
+                    _remainingTime +=
+                        (int) track.EveningSession.EndTime.Subtract(track.EveningSession.StartTime).TotalMinutes;
+                }
             }
         }
 
@@ -107,6 +112,16 @@ namespace ConferenceTrackManagement
         public TalkSession EveningSession { get; set; }
 
         public NetworkingEvent Networking { get; set; }
+    }
+
+    public class Day
+    {
+        public IEnumerable<Track> Tracks { get; private set; }
+
+        public Day(IEnumerable<Track> tracks)
+        {
+            Tracks = tracks;
+        }
     }
 }
 

@@ -15,24 +15,31 @@ namespace ConferenceTrackManagementTester
         private TalkDuration _duration;
         private IScheduler _scheduler;
         private List<Track> _tracks;
+        private List<Day> _days;
 
         [SetUp]
         public void Initialize()
         {
             _duration = new TalkDuration(TimeUnit.Min, 60);
             _scheduler=new SimpleScheduler();
-            SetTrackSchedule();
-            _testConference = new Conference(_scheduler,_tracks);
+            SetDaysSchedule();
+            _testConference = new Conference(_scheduler,_days);
             _testConference.ResultFormatter = new TextFileFormatter();
         }
 
-        private void SetTrackSchedule()
+        
+
+        private void SetDaysSchedule()
         {
+            _days=new List<Day>();
+            
             _tracks=new List<Track>();
             for (var i = 0; i < 2; i++)
             {
                 _tracks.Add(Helper.GetNewTrack());
             }
+
+            _days.Add(new Day(_tracks));
         }
 
         
@@ -125,9 +132,9 @@ namespace ConferenceTrackManagementTester
         [ExpectedException]
         public void NotRegisterTalksIfItCannotBeScheduled()
         {
-            _testConference = new Conference(_scheduler, new List<Track>(){
+            _testConference = new Conference(_scheduler, new List<Day>(){ new Day( new List<Track>(){
                                                                             Helper.GetNewTrack()
-                                                                          });
+                                                                          })});
          
             _testConference.TalksLoader = new FileTalksLoader(Helper.GetTalksListOne());
             _testConference.RegisterTalks();
@@ -216,7 +223,7 @@ namespace ConferenceTrackManagementTester
 
         private int GetScheduledTalks()
         {
-            return _testConference.Tracks.Sum(track => (track.EveningSession.Talks.Count + track.MorningSession.Talks.Count));
+            return _testConference.Days.Sum(day => day.Tracks.Sum( track=>track.EveningSession.Talks.Count + track.MorningSession.Talks.Count));
         }
     }
 

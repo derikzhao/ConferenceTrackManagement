@@ -7,3 +7,18 @@ C:\Users\SHAILESH\documents\visual studio 2012\Projects\ConferenceTrackManagemen
 C:\Users\SHAILESH\documents\visual studio 2012\Projects\ConferenceTrackManagement\ConferenceTrackManagementTester\obj\Debug\ConferenceTrackManagementTester.csprojResolveAssemblyReference.cache
 C:\Users\SHAILESH\documents\visual studio 2012\Projects\ConferenceTrackManagement\ConferenceTrackManagementTester\obj\Debug\ConferenceTrackManagementTester.dll
 C:\Users\SHAILESH\documents\visual studio 2012\Projects\ConferenceTrackManagement\ConferenceTrackManagementTester\obj\Debug\ConferenceTrackManagementTester.pdb
+C:\Users\Pirates of OOPS\Documents\Visual Studio 2012\Projects\ConferenceTrackManagement\ConferenceTrackManagementTester\obj\Debug\ConferenceTrackManagementTester.csprojResolveAssemblyReference.cache
+C:\Users\Pirates of OOPS\Documents\Visual Studio 2012\Projects\ConferenceTrackManagement\ConferenceTrackManagementTester\obj\Debug\ConferenceTrackManagementTester.pdb
+C:\Users\Pirates of OOPS\Documents\Visual Studio 2012\Projects\ConferenceTrackManagement\ConferenceTrackManagementTester\bin\Debug\ConferenceTrackManagementTester.dll
+C:\Users\Pirates of OOPS\Documents\Visual Studio 2012\Projects\ConferenceTrackManagement\ConferenceTrackManagementTester\bin\Debug\ConferenceTrackManagementTester.pdb
+C:\Users\Pirates of OOPS\Documents\Visual Studio 2012\Projects\ConferenceTrackManagement\ConferenceTrackManagementTester\bin\Debug\ConferenceTrackManagement.dll
+C:\Users\Pirates of OOPS\Documents\Visual Studio 2012\Projects\ConferenceTrackManagement\ConferenceTrackManagementTester\bin\Debug\mscorlib.dll
+C:\Users\Pirates of OOPS\Documents\Visual Studio 2012\Projects\ConferenceTrackManagement\ConferenceTrackManagementTester\bin\Debug\nunit.framework.dll
+C:\Users\Pirates of OOPS\Documents\Visual Studio 2012\Projects\ConferenceTrackManagement\ConferenceTrackManagementTester\bin\Debug\ConferenceTrackManagement.pdb
+C:\Users\Pirates of OOPS\Documents\Visual Studio 2012\Projects\ConferenceTrackManagement\ConferenceTrackManagementTester\bin\Debug\nunit.framework.xml
+C:\Users\Pirates of OOPS\Documents\Visual Studio 2012\Projects\ConferenceTrackManagement\ConferenceTrackManagementTester\bin\Debug\normidna.nlp
+C:\Users\Pirates of OOPS\Documents\Visual Studio 2012\Projects\ConferenceTrackManagement\ConferenceTrackManagementTester\bin\Debug\normnfc.nlp
+C:\Users\Pirates of OOPS\Documents\Visual Studio 2012\Projects\ConferenceTrackManagement\ConferenceTrackManagementTester\bin\Debug\normnfd.nlp
+C:\Users\Pirates of OOPS\Documents\Visual Studio 2012\Projects\ConferenceTrackManagement\ConferenceTrackManagementTester\bin\Debug\normnfkc.nlp
+C:\Users\Pirates of OOPS\Documents\Visual Studio 2012\Projects\ConferenceTrackManagement\ConferenceTrackManagementTester\bin\Debug\normnfkd.nlp
+C:\Users\Pirates of OOPS\Documents\Visual Studio 2012\Projects\ConferenceTrackManagement\ConferenceTrackManagementTester\obj\Debug\ConferenceTrackManagementTester.dll
